@@ -1,0 +1,36 @@
+#N canvas 670 183 563 521 12;
+#X obj 29 33 print;
+#X obj 52 -20 dumpOSC 12001;
+#X floatatom 88 49 5 0 0 0 - - -;
+#X obj 81 188 readsf~;
+#X obj 67 339 dac~;
+#X msg 83 149 open suonomare.wav \, 1;
+#X obj 233 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 167 264 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 71 280 *~ 0.1;
+#X floatatom 140 419 5 0 0 0 - - -;
+#X obj 46 111 loadbang;
+#X floatatom 23 174 5 0 0 0 - - -;
+#X obj 79 20 route haypersona nohaypersona;
+#X floatatom 163 50 5 0 0 0 - - -;
+#X floatatom 208 421 5 0 0 0 - - -;
+#X connect 1 0 0 0;
+#X connect 1 0 12 0;
+#X connect 2 0 7 0;
+#X connect 3 0 8 0;
+#X connect 3 1 6 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 1;
+#X connect 7 0 9 0;
+#X connect 7 0 14 0;
+#X connect 8 0 4 0;
+#X connect 8 0 4 1;
+#X connect 10 0 11 0;
+#X connect 10 0 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 2 0;
+#X connect 12 1 13 0;
+#X connect 13 0 7 0;
